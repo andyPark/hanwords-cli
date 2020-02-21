@@ -16,13 +16,15 @@ def main():
             print("정답입니다!")
         else:
             print("That's not correct! The answer was " + korean)
+    
+    print("Congrats you got {0} points!".format(point_total))
 
 def get_questions(questions_list, vocabulary_words):
     for korean, english in vocabulary_words.items():
         questions_list.append((english, korean))
 
 def question_formatting(text):
-    return "How do you say {0} in Korean? ".format(text) 
+    return "How do you say \"{0}\" in Korean? ".format(text) 
 
 if __name__ == '__main__':
     main()
